@@ -115,4 +115,4 @@ To run the application locally, open `index.html` directly in a browser.
 Alternatively, run:
 
 ```bash
-python -m http.server 8080
+http://localhost:8080/
