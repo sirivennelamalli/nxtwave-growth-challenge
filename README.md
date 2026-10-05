@@ -1,4 +1,4 @@
-# NxtWave Growth Intern Challenge – Round 1
+# NxtWave Growth Intern Challenge
 
 ## AI Workshop Growth Engine
 
