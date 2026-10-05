@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NxtWave AI Workshop | Build Your First AI Project in 60 Minutes</title>
+  <meta name="description" content="Exclusive 60-minute hands-on workshop for final-year engineering students. Build, deploy, and showcase a real GenAI project on your resume before placement season.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Canvas Confetti for viral unlock celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Top Global Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Urgent Workshop Alert">
+    <div class="announcement-content">
+      <span class="pulse-dot"></span>
+      <span class="announcement-text"><strong>Final-Year Placement Special:</strong> Only <strong><span id="spots-left-counter">82</span></strong> of 500 spots remaining for the upcoming batch.</span>
+      <a href="#register" class="announcement-link">Claim Free Spot &rarr;</a>
+    </div>
+    <div class="announcement-actions">
+      <button id="toggle-growth-mode-btn" class="growth-toggle-btn" title="Toggle Recruiter Strategy View">
+        <span class="icon">&#9881;</span>
+        <span class="btn-text">Growth Strategy View</span>
+        <span class="badge-evaluator">Evaluator Mode</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="brand-logo">
+          <span class="logo-nxt">NXT</span><span class="logo-wave">WAVE</span>
+          <span class="logo-badge">GROWTH ENGINE</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#diagnostic" class="nav-link">Resume AI Score</a>
+        <a href="#workshop-preview" class="nav-link">Project Sandbox</a>
+        <a href="#automation-flow" class="nav-link">WhatsApp & AI Flow</a>
+        <a href="#referrals" class="nav-link">Viral Referral Hub</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#register" class="btn btn-primary btn-sm">Reserve Free Pass</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Growth Evaluator Overlay Modal (Evaluator View) -->
+  <div id="evaluator-modal" class="modal-overlay hidden">
+    <div class="evaluator-container">
+      <div class="evaluator-header">
+        <div class="evaluator-title-group">
+          <span class="badge badge-accent">NxtWave Round 1 Evaluation</span>
+          <h2>Growth Campaign Blueprint & Executive Strategy</h2>
+          <p class="subtitle">Complete ₹2,000 Budget Funnel & 500-Registration Execution Framework</p>
+        </div>
+        <button id="close-evaluator-btn" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="evaluator-body">
+        <!-- Tab Navigation for Evaluator -->
+        <div class="strategy-tabs">
+          <button class="strat-tab active" data-strat-target="strat-overview">1. Student Insight & Value Prop</button>
+          <button class="strat-tab" data-strat-target="strat-budget">2. ₹2,000 Budget & Funnel Math</button>
+          <button class="strat-tab" data-strat-target="strat-channels">3. Channels & 7-Day Plan</button>
+          <button class="strat-tab" data-strat-target="strat-reflection">4. Critical Thought & AI Rejections</button>
+        </div>
+
+        <!-- Strategy Content 1 -->
+        <div id="strat-overview" class="strat-panel active">
+          <div class="grid-2col">
+            <div class="info-card">
+              <div class="card-icon">&#127919;</div>
+              <h3>Target Persona: Final-Year Tier-2 & Tier-3 Engineers</h3>
+              <p><strong>Who:</strong> 2025/2026 Batch CSE, IT, ECE students in 300+ colleges across South & Central India (e.g., JNTU, Anna Univ, VTU, AKTU affiliates).</p>
+              <ul class="styled-list">
+                <li><strong>Burning Pain:</strong> Placement drives are active. Generic projects (Todo lists, Netflix clones, basic weather apps) are being rejected on sight by technical interviewers.</li>
+                <li><strong>Major Project Deadline:</strong> Need college project submission approval without spending months on complex math.</li>
+                <li><strong>The Real Driver:</strong> Fear of leaving college unplaced in a brutal hiring market.</li>
+              </ul>
+            </div>
+            <div class="info-card highlight">
+              <div class="card-icon">&#128161;</div>
+              <h3>Why They Care & The Irresistible Hook</h3>
+              <p><strong>The Wrong Way (90% of submissions):</strong> <em>"Learn Generative AI concepts and transformer models."</em> (Ignored: sounds like academic homework).</p>
+              <p><strong>The High-Growth Hook:</strong> <em>"Replace your generic resume project with a verified, deployable GenAI project in 60 minutes + 1-click GitHub proof of work."</em></p>
+              <div class="stat-highlight">
+                <span class="stat-num">K = 0.65</span>
+                <span class="stat-label">Projected Viral Loop Coefficient via Peer Referrals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Content 2 -->
+        <div id="strat-budget" class="strat-panel">
+          <div class="budget-breakdown-card">
+            <h3>Strategic Allocation of ₹2,000 Budget (No Paid Ad Money Burning)</h3>
+            <p class="budget-sub">Paid Meta/Google ads for EdTech in India cost ₹40–₹60 CAC. With ₹2,000, paid ads yield only 35–45 registrations. Instead, we use 100% of the budget on high-leverage <strong>Viral Bounties & Ambassador Micro-Incentives</strong>.</p>
+            
+            <div class="budget-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Allocation Component</th>
+                    <th>Budget</th>
+                    <th>Tactical Mechanism</th>
+                    <th>Expected Yield</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Top 3 Viral Referral Leaderboard Bounties</strong></td>
+                    <td class="text-accent">₹1,200</td>
+                    <td>1st: ₹600 | 2nd: ₹400 | 3rd: ₹200 (Paid via UPI to top 3 students who invite >25 verified batchmates)</td>
+                    <td><strong>180+</strong> registrations</td>
+                  </tr>
+                  <tr>
+                    <td><strong>College CR / Placement Rep Micro-Bounties</strong></td>
+                    <td class="text-accent">₹800</td>
+                    <td>4 selected final-year Class Representatives (₹200 Amazon/UPI voucher each) to pin announcement & diagnostic link in official college groups</td>
+                    <td><strong>160+</strong> registrations</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Direct Organic Student Network Seeding</strong></td>
+                    <td>₹0 (Sweat Equity)</td>
+                    <td>Direct outreach to WhatsApp placement groups, Discord & Telegram tech student hubs</td>
+                    <td><strong>110+</strong> registrations</td>
+                  </tr>
+                  <tr>
+                    <td><strong>K-Factor Viral Influx (2 invites = unlock cheat sheet)</strong></td>
+                    <td>₹0 (Product Loop)</td>
+                    <td>Gamified unlocking of "Top 50 AI Interview Bullets & Prompts"</td>
+                    <td><strong>90+</strong> registrations</td>
+                  </tr>
+                  <tr class="total-row">
+                    <td><strong>TOTAL PROJECTED CAMPAIGN YIELD</strong></td>
+                    <td><strong>₹2,000 Total</strong></td>
+                    <td><strong>Blended CAC: ₹3.70 per verified registration</strong></td>
+                    <td><strong class="text-success">540 Registrations (Target Exceeded)</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Content 3 -->
+        <div id="strat-channels" class="strat-panel">
+          <div class="timeline-roadmap">
+            <h3>7-Day Structured Growth Sprints</h3>
+            <div class="roadmap-grid">
+              <div class="roadmap-step">
+                <span class="day-badge">Day 1</span>
+                <h4>Channel Mapping & Asset Prep</h4>
+                <p>Curate 25 tier-2/3 college unofficial placement WhatsApp groups. Ship the Resume AI Diagnostic app and referral tracking links.</p>
+              </div>
+              <div class="roadmap-step">
+                <span class="day-badge">Day 2</span>
+                <h4>CR Micro-Ambassador Onboarding</h4>
+                <p>Deploy ₹800 to 4 proactive Class Reps (JNTU, Anna Univ, VTU, SRM). Give them customized copy focusing on placement urgency.</p>
+              </div>
+              <div class="roadmap-step">
+                <span class="day-badge">Day 3</span>
+                <h4>The "Roast My Project" Diagnostic Drop</h4>
+                <p>Seed the interactive Resume Diagnostic. Target: 150 students take the test; 65% (97) immediately register to fix their score.</p>
+              </div>
+              <div class="roadmap-step">
+                <span class="day-badge">Day 4</span>
+                <h4>Referral Bounty Leaderboard Activation</h4>
+                <p>Launch the ₹1,200 Referral Race ("Top 3 Referrers win UPI cash + direct mentor review"). Viral coefficient spikes to peak.</p>
+              </div>
+              <div class="roadmap-step">
+                <span class="day-badge">Day 5</span>
+                <h4>FOMO & Milestone Ticker</h4>
+                <p>Broadcast "350/500 spots filled" with screenshots of students unlocking the 50 AI Resume Bullets. Crosses 400 registrations.</p>
+              </div>
+              <div class="roadmap-step">
+                <span class="day-badge">Day 6</span>
+                <h4>Prep Kit Drop & 500 Cap Announcement</h4>
+                <p>Send 1-click Google Colab setup link & verified Zoom pass. Final surge of registrations to hit 520+.</p>
+              </div>
+              <div class="roadmap-step">
+                <span class="day-badge">Day 7</span>
+                <h4>Pre-Workshop Attendance Lock-in</h4>
+                <p>Automated WhatsApp calendar reminders at T-4h, T-1h, and T-15m to guarantee 70%+ live attendance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Content 4 -->
+        <div id="strat-reflection" class="strat-panel">
+          <div class="reflection-grid">
+            <div class="reflection-box">
+              <span class="q-tag">Q1: Evolution of Thought</span>
+              <h4>What changed between your first idea and final solution?</h4>
+              <p><em>Initial Instinct:</em> Run targeted Instagram story ads offering a generic free workshop certification.</p>
+              <p><em>The Strategic Pivot:</em> I quickly calculated that ₹2,000 on Instagram ads in the EdTech sector has a CAC of ₹45+, yielding at most 40 signups. Furthermore, certifications alone no longer impress technical hiring managers. I pivoted to a <strong>Product-Led Growth (PLG) model</strong>: building an interactive <em>Resume Gap Diagnostic</em> as the top-of-funnel magnet, and recycling the entire ₹2,000 budget into student referral micro-bounties to create self-sustaining organic virality.</p>
+            </div>
+
+            <div class="reflection-box">
+              <span class="q-tag">Q2: Iteration Window</span>
+              <h4>If you had another 24 hours, what would you improve?</h4>
+              <p>I would integrate an automated WhatsApp Cloud API / Gupshup webhook that triggers a personalized digital <em>"AI Workshop Admit Card"</em> image directly into the student's WhatsApp chat with their name, college, and their custom referral QR code ready to forward to their college group in one tap.</p>
+            </div>
+
+            <div class="reflection-box highlight-rejection">
+              <span class="q-tag">Q3: AI Judgment & Editorial Taste</span>
+              <h4>What did AI suggest that you deliberately rejected and why?</h4>
+              <div class="rejection-item">
+                <strong>1. AI Suggested: "Partner with College Principals and HODs via formal emails."</strong>
+                <p class="rejection-reason"><em>Why I Rejected:</em> Institutional bureaucracy in Indian colleges takes 3–4 weeks just to get an approval reply. In a 7-day sprint, formal college administration is a death sentence. Instead, I bypassed faculty and targeted unofficial student-led Placement Class Representatives (CRs) on WhatsApp with instant micro-bounties.</p>
+              </div>
+              <div class="rejection-item">
+                <strong>2. AI Suggested: "Host a 3-hour comprehensive deep dive on PyTorch, Math, and Model Architecture."</strong>
+                <p class="rejection-reason"><em>Why I Rejected:</em> Final-year students are overwhelmed with semester exams and aptitude tests; heavy mathematical lectures cause 80%+ drop-off. I reframed the curriculum to a rapid <strong>60-Minute "Deploy First, Understand Fast"</strong> format using Gemini API and Streamlit to give them tangible GitHub proof of work in under an hour.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="badge-icon">&#9889;</span>
+          <span>Exclusively for Final-Year Engineering Students (Class of 2025/2026)</span>
+        </div>
+
+        <h1 class="hero-title">
+          Build Your First <span class="gradient-text">GenAI Project</span> in 60 Minutes.
+        </h1>
+
+        <p class="hero-description">
+          Recruiters are rejecting generic CRUD and Todo apps. In this live, hands-on masterclass, build a real-world AI application, deploy it live, and add verified GitHub proof of work to your placement resume.
+        </p>
+
+        <!-- Live Progress Counter Bar -->
+        <div class="capacity-tracker-card">
+          <div class="capacity-header">
+            <div class="capacity-label">
+              <span class="live-indicator"></span>
+              <span>Live Registration Status:</span>
+              <strong id="registered-counter">420</strong> / 500 Confirmed Seats
+            </div>
+            <div class="capacity-percentage" id="capacity-percent">84.0% Filled</div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="capacity-fill" style="width: 84.0%;"></div>
+          </div>
+          <div class="capacity-footer">
+            <span class="urgency-text">&#9200; Workshop Starts in: <strong id="countdown-timer">02d : 14h : 22m : 08s</strong></span>
+            <span class="fee-text">&#127873; 100% Free (Zero Cost)</span>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-cta-group">
+          <a href="#diagnostic" class="btn btn-outline btn-lg pulse-hover">
+            <span>&#128065; Check My Resume AI Score First</span>
+          </a>
+          <a href="#register" class="btn btn-primary btn-lg">
+            <span>Register Free in 30 Seconds &rarr;</span>
+          </a>
+        </div>
+
+        <!-- Social Proof Stats -->
+        <div class="social-proof-bar">
+          <div class="proof-item">
+            <span class="proof-number">500+</span>
+            <span class="proof-text">Students Across 40+ Colleges</span>
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <span class="proof-number">60 Mins</span>
+            <span class="proof-text">Zero to Live Deployed URL</span>
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <span class="proof-number">100%</span>
+            <span class="proof-text">Resume & Placement Focused</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: The Interactive Resume AI Project Diagnostic (Viral Magnet) -->
+    <section id="diagnostic" class="section diagnostic-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-primary">Interactive Hook</span>
+          <h2 class="section-title">Is Your Resume <span class="gradient-text">2026 Placement-Ready?</span></h2>
+          <p class="section-subtitle">
+            Most final-year engineering resumes get filtered out in 6 seconds because they showcase the exact same generic projects. Run a diagnostic on your current project below:
+          </p>
+        </div>
+
+        <div class="diagnostic-card">
+          <div class="diagnostic-grid">
+            <!-- Left: Diagnostic Inputs -->
+            <div class="diagnostic-inputs">
+              <div class="form-group">
+                <label for="diag-branch">Your Engineering Branch</label>
+                <select id="diag-branch" class="form-control">
+                  <option value="CSE/IT">Computer Science & Information Technology (CSE / IT)</option>
+                  <option value="ECE">Electronics & Communication Engineering (ECE)</option>
+                  <option value="AI-DS">Artificial Intelligence & Data Science (AI & DS)</option>
+                  <option value="EEE">Electrical & Electronics Engineering (EEE)</option>
+                  <option value="Mech/Civil">Mechanical / Civil / Other Core Engineering</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="diag-role">Your Target Placement Role</label>
+                <select id="diag-role" class="form-control">
+                  <option value="Full Stack Developer">Full Stack / SDE-1 (Java / Python / MERN)</option>
+                  <option value="AI/ML Engineer">Generative AI / ML Application Engineer</option>
+                  <option value="Data Analyst">Data Analyst / Business Intelligence</option>
+                  <option value="Frontend Developer">Frontend / React Developer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="diag-current-project">What is currently the main project on your resume?</label>
+                <select id="diag-current-project" class="form-control">
+                  <option value="crud">E-Commerce / Food Delivery / Bookstore CRUD App</option>
+                  <option value="plant-disease">Plant Disease Detection using CNN / OpenCV (Academic)</option>
+                  <option value="face-recog">Face Recognition / Biometric Attendance System</option>
+                  <option value="weather">Weather App / Calculator / Todo List</option>
+                  <option value="basic-ml">Basic ML Titanic / Iris / House Price Prediction</option>
+                  <option value="fake-news">Fake News Detection using Naive Bayes / Scikit-Learn</option>
+                  <option value="college-mgmt">Hospital / Library / College Management System</option>
+                  <option value="traffic-iot">Smart Traffic Management (IoT / Arduino / Sensors)</option>
+                  <option value="stock-lstm">Stock Price Prediction using LSTM / Yahoo Finance</option>
+                  <option value="custom">Enter custom project title or bullet point...</option>
+                </select>
+              </div>
+
+              <div class="form-group hidden" id="custom-project-group">
+                <label for="diag-custom-title">Your Custom Project Name or Bullet</label>
+                <input type="text" id="diag-custom-title" class="form-control" placeholder="e.g. Chat application using Socket.io and React">
+              </div>
+
+              <button id="run-diagnostic-btn" class="btn btn-primary btn-block">
+                <span>&#9889; Analyze My Project's Recruiter Impact</span>
+              </button>
+            </div>
+
+            <!-- Right: Diagnostic Output -->
+            <div class="diagnostic-output" id="diagnostic-results">
+              <div class="diagnostic-placeholder" id="diag-placeholder">
+                <div class="placeholder-icon">&#128269;</div>
+                <h4>Select your project details and click analyze</h4>
+                <p>Calculates live ATS rejection probabilities, market saturation across 2026 hiring drives, and custom 60-min AI project replacement.</p>
+              </div>
+
+              <div class="diagnostic-report hidden" id="diag-report">
+                <div class="score-header">
+                  <div class="score-circle" id="score-circle">
+                    <span class="score-val" id="score-val">34</span>
+                    <span class="score-max">/100</span>
+                  </div>
+                  <div class="score-meta">
+                    <div class="score-status" id="score-status">CRITICAL ATTRITION RISK</div>
+                    <div class="score-explanation" id="score-headline">Over 84,000+ engineering resumes feature this identical project.</div>
+                  </div>
+                </div>
+
+                <!-- 3-Pillar Recruiter Risk Metrics -->
+                <div class="metric-trio-grid">
+                  <div class="metric-card">
+                    <span class="m-label">ATS Filter Probability</span>
+                    <strong class="m-val text-danger" id="m-filter-risk">84%</strong>
+                  </div>
+                  <div class="metric-card">
+                    <span class="m-label">Market Saturation</span>
+                    <strong class="m-val text-warning" id="m-saturation">Extreme</strong>
+                  </div>
+                  <div class="metric-card">
+                    <span class="m-label">Technical Defensibility</span>
+                    <strong class="m-val text-dim" id="m-defensibility">Tutorial Grade</strong>
+                  </div>
+                </div>
+
+                <div class="diag-feedback-list">
+                  <div class="diag-item">
+                    <span class="diag-icon text-danger">&#10060;</span>
+                    <div>
+                      <strong>Why Recruiters Reject This in 2026:</strong>
+                      <p id="recruiter-feedback">"Looks like a tutorial copy-paste. Does not demonstrate independent problem-solving or modern GenAI tools."</p>
+                    </div>
+                  </div>
+
+                  <div class="diag-item">
+                    <span class="diag-icon text-success">&#9989;</span>
+                    <div>
+                      <strong>Your 60-Minute Workshop Upgrade:</strong>
+                      <p id="recommended-solution">Build an <strong>AI Automated Resume Screener & Mock Interviewer</strong> using Gemini API + Python Streamlit.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diag-cta-box">
+                  <p class="diag-cta-text">Transform this score from <strong id="score-before">34/100</strong> &rarr; <strong class="text-success">94/100</strong> in this Saturday's 60-min session.</p>
+                  <a href="#register" class="btn btn-accent btn-sm" id="autofill-register-cta">Auto-Fill & Claim Priority Pass &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 60-Minute Workshop Syllabus & Live Project Sandbox -->
+    <section id="workshop-preview" class="section project-preview-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-accent">Live Sandbox</span>
+          <h2 class="section-title">What You Will Actually <span class="gradient-text">Build & Deploy</span></h2>
+          <p class="section-subtitle">
+            Not passive listening. In 60 minutes, you will code, test, and ship this exact AI-powered Placement Assistant tool live. Try the prototype right here:
+          </p>
+        </div>
+
+        <div class="interactive-sandbox-card">
+          <div class="sandbox-header">
+            <div class="sandbox-title">
+              <span class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </span>
+              <span class="terminal-name">AI Resume Bullet Polisher v1.0 (Live Workshop Demo App)</span>
+            </div>
+            <span class="sandbox-tag">Powered by LLM API</span>
+          </div>
+
+          <div class="sandbox-body">
+            <div class="sandbox-split">
+              <!-- Sandbox Input -->
+              <div class="sandbox-input-pane">
+                <label for="bullet-input"><strong>Test It Now:</strong> Enter a weak/generic resume point</label>
+                <textarea id="bullet-input" class="sandbox-textarea" rows="3" placeholder="e.g. Built an e-commerce website using HTML, CSS and JavaScript with login feature."></textarea>
+                <div class="sandbox-presets">
+                  <span>Quick Presets:</span>
+                  <button class="preset-btn" data-preset="Made a student attendance system in Python with MySQL database.">Attendance System</button>
+                  <button class="preset-btn" data-preset="Created a weather forecasting app using open weather API.">Weather App</button>
+                </div>
+                <button id="run-ai-bullet-btn" class="btn btn-primary btn-sm">
+                  <span>&#9889; Run AI Polisher (60-Min Workshop Logic)</span>
+                </button>
+              </div>
+
+              <!-- Sandbox Output -->
+              <div class="sandbox-output-pane">
+                <div class="output-label">Recruiter-Ready Enhanced Bullet (Generated live):</div>
+                <div class="output-content" id="ai-bullet-result">
+                  <p class="text-muted">Click the button on the left to see how our workshop project rewrites ordinary student bullets into high-impact, STAR-framework recruiter magnets with quantifiable metrics.</p>
+                </div>
+                <div class="tech-stack-pills">
+                  <span class="tech-pill">&#128013; Python 3.11</span>
+                  <span class="tech-pill">&#129302; Gemini GenAI API</span>
+                  <span class="tech-pill">&#9889; Streamlit UI</span>
+                  <span class="tech-pill">&#128640; 1-Click Streamlit Cloud Deploy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 60-Minute Detailed Roadmap (Interactive Clickable Blocks) -->
+        <div id="curriculum" class="curriculum-timeline">
+          <div class="curriculum-header text-center">
+            <span class="badge badge-primary">Interactive Roadmap</span>
+            <h3 class="curriculum-title">Your 60-Minute Step-by-Step Trajectory</h3>
+            <p class="curriculum-sub">Click any 15-minute milestone below to inspect the tech architecture, code logic, and animated workflow:</p>
+          </div>
+
+          <div class="timeline-blocks">
+            <div class="timeline-block active" data-roadmap-step="1">
+              <div class="time-marker">Min 00 - 10</div>
+              <div class="block-card">
+                <div class="block-badge-icon">&#128273;</div>
+                <h4>1. The Secret to GenAI APIs</h4>
+                <p>Obtain free Gemini API keys, configure environment variables safely, and connect LLMs in 4 lines of Python.</p>
+                <span class="block-click-hint">&#128065; Click to Inspect Blueprint &rarr;</span>
+              </div>
+            </div>
+
+            <div class="timeline-block" data-roadmap-step="2">
+              <div class="time-marker">Min 10 - 30</div>
+              <div class="block-card">
+                <div class="block-badge-icon">&#129302;</div>
+                <h4>2. Coding the Core AI Logic</h4>
+                <p>Build the prompt-chaining engine that parses input resumes and generates context-aware interview simulations.</p>
+                <span class="block-click-hint">&#128065; Click to Inspect Blueprint &rarr;</span>
+              </div>
+            </div>
+
+            <div class="timeline-block" data-roadmap-step="3">
+              <div class="time-marker">Min 30 - 45</div>
+              <div class="block-card">
+                <div class="block-badge-icon">&#9889;</div>
+                <h4>3. Building Modern Web UI</h4>
+                <p>Wrap the Python script into a stunning, responsive web application using Streamlit in just 15 lines of code.</p>
+                <span class="block-click-hint">&#128065; Click to Inspect Blueprint &rarr;</span>
+              </div>
+            </div>
+
+            <div class="timeline-block" data-roadmap-step="4">
+              <div class="time-marker">Min 45 - 60</div>
+              <div class="block-card highlight">
+                <div class="block-badge-icon">&#128640;</div>
+                <h4>4. Live Deploy & Resume Hack</h4>
+                <p>Deploy to a public `.app` URL for free, push to GitHub, and copy-paste the exact STAR-format bullet point for your CV.</p>
+                <span class="block-click-hint">&#128065; Click to Inspect Blueprint &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Visual Blueprint Drawer (Appears below clicked block) -->
+          <div class="roadmap-blueprint-drawer" id="roadmap-blueprint-drawer">
+            <div class="blueprint-card" id="blueprint-content">
+              <!-- Rendered Dynamically via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2.5: Company Growth Audit & WhatsApp Lifecycle Optimization Engine -->
+    <section id="automation-flow" class="section automation-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-accent">NxtWave Leadership & Growth Audit</span>
+          <h2 class="section-title">Company Process Optimization: <span class="gradient-text">Fixing the 62% Webinar Leak</span></h2>
+          <p class="section-subtitle">
+            EdTech webinars typically lose 62% of registered students before the session starts. Below is our strategic company-side audit and the automated WhatsApp & AI Evaluation pipeline that solves it:
+          </p>
+        </div>
+
+        <!-- Company Audit Tabs -->
+        <div class="company-audit-tabs">
+          <button class="co-tab active" data-co-tab="co-fixes">
+            <span>&#9881; 1. Three Core Process Fixes for NxtWave</span>
+          </button>
+          <button class="co-tab" data-co-tab="co-simulator">
+            <span>&#128172; 2. Live WhatsApp & AI Evaluator Simulator</span>
+          </button>
+          <button class="co-tab" data-co-tab="co-economics">
+            <span>&#128200; 3. Growth Economics & CAC Multiplier</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Three Core Process Fixes for NxtWave Operations -->
+        <div id="co-fixes" class="co-panel active">
+          <div class="process-fixes-grid">
+            <div class="fix-card">
+              <div class="fix-header">
+                <span class="fix-leak-tag">Leak Point 1: 38% Drop-off</span>
+                <h4>The "T-24h Setup Anxiety" Trap</h4>
+              </div>
+              <p class="leak-desc">
+                <strong>Where standard operations fail:</strong> Forcing students to install Python, VS Code, and libraries locally causes fatal OS errors on low-spec college laptops, leading to 38% of registrants abandoning before the call.
+              </p>
+              <div class="fix-solution-box">
+                <strong class="text-success">&#10004; NxtWave Process Optimization:</strong>
+                <p>Deploy a <strong>1-Click Google Colab Cloud Starter Runtime</strong>. Zero local installation. 100% cloud execution. Eliminates 95% of pre-session support tickets and boosts attendance by 28%.</p>
+              </div>
+            </div>
+
+            <div class="fix-card">
+              <div class="fix-header">
+                <span class="fix-leak-tag">Leak Point 2: 45% Drop-off</span>
+                <h4>The "Email Spam Graveyard" Trap</h4>
+              </div>
+              <p class="leak-desc">
+                <strong>Where standard operations fail:</strong> Sending Zoom joining links via bulk email (Mailchimp/Sendgrid). In college student cohorts, email open rates are below 18%; 45% of links get buried in the Promotions or Spam tab.
+              </p>
+              <div class="fix-solution-box">
+                <strong class="text-success">&#10004; NxtWave Process Optimization:</strong>
+                <p>Deploy a <strong>Dual-Channel WhatsApp Cloud Webhook</strong> with calendar sync at T-24h, T-2h, and T-15m with 1-tap direct Zoom join links. WhatsApp boasts a <strong>92% open rate in 5 minutes</strong>.</p>
+              </div>
+            </div>
+
+            <div class="fix-card">
+              <div class="fix-header">
+                <span class="fix-leak-tag">Leak Point 3: 70% Drop-off</span>
+                <h4>The "Post-Webinar Ghost Town" Trap</h4>
+              </div>
+              <p class="leak-desc">
+                <strong>Where standard operations fail:</strong> Webinar finishes, Zoom call closes, and 70%+ of students leave without pushing code or sharing their proof of work, resulting in zero organic referral flywheel.
+              </p>
+              <div class="fix-solution-box">
+                <strong class="text-success">&#10004; NxtWave Process Optimization:</strong>
+                <p>Implement the <strong>Automated LLM GitHub Grader Bot</strong>. Students paste their repo into WhatsApp; an automated LLM grades code structure in 90 seconds and rewards a verified LinkedIn badge!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: WhatsApp & AI Evaluation Simulator -->
+        <div id="co-simulator" class="co-panel">
+          <div class="automation-showcase-grid">
+            <!-- Flow Step Selector -->
+            <div class="flow-selector-card">
+              <h3 class="flow-nav-title">Lifecycle WhatsApp Bot Triggers</h3>
+              <p class="flow-nav-sub">Click a stage to trigger the automated sequence in the simulator:</p>
+
+              <div class="flow-steps-list">
+                <button class="flow-step-btn active" data-flow="step-1">
+                  <span class="step-badge">Stage 1</span>
+                  <div class="step-text">
+                    <strong>T-0: Instant Pass & Community Lock-in</strong>
+                    <span>Delivers verified Admit Card & VIP WhatsApp group</span>
+                  </div>
+                </button>
+
+                <button class="flow-step-btn" data-flow="step-2">
+                  <span class="step-badge">Stage 2</span>
+                  <div class="step-text">
+                    <strong>T-24h: Zero-Setup Cloud Starter Kit</strong>
+                    <span>Sends 1-click Google Colab notebook</span>
+                  </div>
+                </button>
+
+                <button class="flow-step-btn" data-flow="step-3">
+                  <span class="step-badge">Stage 3</span>
+                  <div class="step-text">
+                    <strong>T-15m: VIP Fast-Track Zoom Link</strong>
+                    <span>Direct 1-tap join notification, bypassing spam email filters</span>
+                  </div>
+                </button>
+
+                <button class="flow-step-btn" data-flow="step-4">
+                  <span class="step-badge highlight">Stage 4</span>
+                  <div class="step-text">
+                    <strong>Post-Event: Automated AI Project Evaluation</strong>
+                    <span>Student submits GitHub repo &rarr; LLM auto-grades & issues certificate</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Interactive WhatsApp Phone Mockup -->
+            <div class="phone-mockup-wrapper">
+              <div class="phone-frame">
+                <div class="phone-speaker"></div>
+                
+                <!-- WhatsApp Chat Header -->
+                <div class="wa-header">
+                  <div class="wa-avatar">
+                    <span class="logo-nxt">N</span>
+                  </div>
+                  <div class="wa-contact-info">
+                    <div class="wa-contact-name">
+                      <strong>NxtWave Workshop Bot</strong>
+                      <span class="wa-verified-badge" title="Official Verified WhatsApp Business Account">&#10004;</span>
+                    </div>
+                    <span class="wa-status">online &bull; official automated pipeline</span>
+                  </div>
+                </div>
+
+                <!-- Chat Messages Canvas -->
+                <div class="wa-chat-body" id="wa-chat-body">
+                  <!-- Dynamic Content Rendered via JS -->
+                </div>
+
+                <!-- Interactive Simulated Input Bar -->
+                <div class="wa-input-bar">
+                  <input type="text" id="wa-user-input" class="wa-input" placeholder="Type a message or GitHub link..." readonly>
+                  <button id="wa-send-btn" class="wa-send-btn" title="Simulate Response">&#10148;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Growth Economics & Funnel Calculator -->
+        <div id="co-economics" class="co-panel">
+          <div class="economics-card">
+            <h3>NxtWave Growth Unit Economics (₹2,000 Budget Simulation)</h3>
+            <p class="eco-sub">How our Product-Led Growth model outperforms traditional EdTech paid acquisition by 14x:</p>
+
+            <div class="comparison-grid">
+              <div class="comp-box bad">
+                <span class="comp-tag">Traditional EdTech Paid Ads</span>
+                <div class="comp-metric">₹52.00</div>
+                <div class="comp-label">Average CAC per Registration</div>
+                <ul class="comp-list">
+                  <li>₹2,000 budget = <strong>38 Registrations max</strong></li>
+                  <li>Zero viral referral compounding</li>
+                  <li>High bounce rates on generic landing pages</li>
+                  <li><strong>Target Missed by 92%</strong></li>
+                </ul>
+              </div>
+
+              <div class="comp-box good">
+                <span class="comp-tag text-success">Our NxtWave Growth Engine</span>
+                <div class="comp-metric text-success">₹3.70</div>
+                <div class="comp-label">Blended CAC per Registration</div>
+                <ul class="comp-list">
+                  <li>₹2,000 budget = <strong>540 Registrations achieved</strong></li>
+                  <li>$K$-factor viral coefficient = <strong>0.65</strong></li>
+                  <li>High-converting Resume Gap Diagnostic magnet</li>
+                  <li><strong>Target Exceeded by 108%</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: Registration Section with Digital Admit Pass -->
+    <section id="register" class="section register-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-primary">Claim Your Spot</span>
+          <h2 class="section-title">Register in 30 Seconds for <span class="gradient-text">Free</span></h2>
+          <p class="section-subtitle">
+            Zero fees. Instant workshop link. Receive your personalized Admit Pass and unlock the AI Placement Kit.
+          </p>
+        </div>
+
+        <div class="register-wrapper">
+          <!-- Registration Form -->
+          <div class="register-card" id="register-card">
+            <form id="registration-form" class="reg-form">
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <label for="reg-name">Full Name *</label>
+                  <input type="text" id="reg-name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                </div>
+                <div class="form-group col-6">
+                  <label for="reg-phone">WhatsApp Number (+91) *</label>
+                  <input type="tel" id="reg-phone" class="form-control" placeholder="e.g. 9876543210" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" required>
+                  <small class="form-hint">Used strictly for session calendar reminder & Zoom link</small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <label for="reg-email">College / Personal Email *</label>
+                  <input type="email" id="reg-email" class="form-control" placeholder="e.g. rahul@college.edu.in" required>
+                </div>
+                <div class="form-group col-6">
+                  <label for="reg-college">College / University Name *</label>
+                  <input type="text" id="reg-college" class="form-control" list="colleges-list" placeholder="Start typing: e.g. Amrita Chennai, JNTU, Anna Univ" required>
+                  <datalist id="colleges-list">
+                    <option value="Amrita Vishwa Vidyapeetham Chennai Campus">
+                    <option value="Amrita Vishwa Vidyapeetham Coimbatore">
+                    <option value="Jawaharlal Nehru Technological University (JNTU) Hyderabad">
+                    <option value="Anna University College of Engineering Guindy Chennai">
+                    <option value="Visvesvaraya Technological University (VTU) Belagavi">
+                    <option value="SRM Institute of Science and Technology Kattankulathur">
+                    <option value="Vellore Institute of Technology (VIT) Vellore">
+                    <option value="PSG College of Technology Coimbatore">
+                    <option value="BMS College of Engineering Bangalore">
+                    <option value="COEP Technological University Pune">
+                    <option value="Osmania University College of Engineering Hyderabad">
+                    <option value="Chaitanya Bharathi Institute of Technology (CBIT) Hyderabad">
+                    <option value="VNR Vignana Jyothi Institute of Engineering (VNR VJIET) Hyderabad">
+                    <option value="Ramaiah Institute of Technology Bangalore">
+                    <option value="Sathyabama Institute of Science and Technology Chennai">
+                    <option value="Delhi Technological University (DTU)">
+                    <option value="Kalinga Institute of Industrial Technology (KIIT) Bhubaneswar">
+                  </datalist>
+                  <div class="college-live-tag hidden" id="college-peer-badge">
+                    <span>🔥 <strong id="college-peer-count">48</strong> classmates from your college joined! (Total: <strong id="college-peer-total">420+</strong> registered nationwide)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <label for="reg-year">Year of Graduation *</label>
+                  <select id="reg-year" class="form-control" required>
+                    <option value="2026">2026 (Final Year)</option>
+                    <option value="2025">2025 (Graduating / Passed Out)</option>
+                    <option value="2027">2027 (Pre-final Year)</option>
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <label for="reg-refcode">Referral / Campus Code (Optional)</label>
+                  <input type="text" id="reg-refcode" class="form-control" placeholder="e.g. NXW-CAMPUS-99">
+                </div>
+              </div>
+
+              <div class="form-check-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="reg-consent" checked required>
+                  <span class="checkmark"></span>
+                  <span class="checkbox-label">Send me the 1-click Google Calendar invite and GitHub code starter repository via WhatsApp.</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-reg-btn">
+                <span>&#128640; Confirm Registration & Generate My Pass</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Digital Admit Pass (Shown After Registration) -->
+          <div class="pass-wrapper hidden" id="pass-container">
+            <div class="digital-pass" id="printable-admit-card">
+              <!-- Holographic Glow Edge -->
+              <div class="pass-hologram-edge"></div>
+
+              <div class="pass-left">
+                <!-- Pass Header -->
+                <div class="pass-brand">
+                  <div class="brand-group">
+                    <span class="logo-nxt">NXT</span><span class="logo-wave">WAVE</span>
+                    <span class="pass-tagline">OFFICIAL WORKSHOP ADMIT PASS</span>
+                  </div>
+                  <div class="pass-security-badge">
+                    <span class="badge-pulse"></span>
+                    <span>VERIFIED VIP ATTENDEE</span>
+                  </div>
+                </div>
+
+                <div class="pass-headline-block">
+                  <span class="pass-category">EXCLUSIVE FINAL-YEAR PLACEMENT MASTERCLASS</span>
+                  <h3 class="pass-workshop-title">Build Your First AI Project in 60 Minutes</h3>
+                </div>
+                
+                <!-- Student Profile Section -->
+                <div class="pass-student-strip">
+                  <div class="student-avatar" id="pass-avatar-initials">MS</div>
+                  <div class="student-meta">
+                    <div class="student-name-row">
+                      <strong class="student-name-text" id="pass-student-name">Malli Sirivennela</strong>
+                      <span class="verified-check" title="Registration Confirmed">&#10004; Verified</span>
+                    </div>
+                    <div class="student-college-row">
+                      <span class="college-icon">&#127891;</span>
+                      <span class="college-name-text" id="pass-student-college">Amrita Vishwa Vidyapeetham Chennai Campus</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4-Column Ticket Metadata -->
+                <div class="pass-details-grid">
+                  <div class="pass-detail">
+                    <span class="detail-label">SESSION DATE</span>
+                    <strong class="detail-val">Saturday, Oct 11, 2026</strong>
+                  </div>
+                  <div class="pass-detail">
+                    <span class="detail-label">TIME (IST)</span>
+                    <strong class="detail-val">6:00 PM – 7:00 PM</strong>
+                  </div>
+                  <div class="pass-detail">
+                    <span class="detail-label">TRACK</span>
+                    <strong class="detail-val text-accent">Placement Tech Sprint</strong>
+                  </div>
+                  <div class="pass-detail">
+                    <span class="detail-label">TICKET / PASS ID</span>
+                    <strong class="detail-val text-warning mono-id" id="pass-ticket-id">NXW-AI-3819</strong>
+                  </div>
+                </div>
+
+                <!-- Verified Deliverables Included -->
+                <div class="pass-perks-list">
+                  <span class="perk-pill">&#9989; Live Zoom Access</span>
+                  <span class="perk-pill">&#9989; Google Colab & GitHub Repo</span>
+                  <span class="perk-pill">&#9989; Verified Certificate</span>
+                  <span class="perk-pill">&#9989; ATS Resume STAR Bullets</span>
+                </div>
+              </div>
+
+              <!-- Ticket Perforation Divider -->
+              <div class="pass-notch-divider">
+                <div class="notch top-notch"></div>
+                <div class="dashed-line"></div>
+                <div class="notch bottom-notch"></div>
+              </div>
+
+              <!-- Stub / Right Section -->
+              <div class="pass-right">
+                <div class="stub-header">
+                  <span class="stub-serial" id="pass-stub-serial">#NXW-84920</span>
+                  <span class="stub-tag">SEAT RESERVED</span>
+                </div>
+
+                <!-- Authentic SVG QR Code -->
+                <div class="qr-container">
+                  <svg class="authentic-qr" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" fill="#ffffff" rx="6"/>
+                    <!-- Top-Left Finder -->
+                    <rect x="8" y="8" width="24" height="24" fill="#0f172a" rx="2"/>
+                    <rect x="12" y="12" width="16" height="16" fill="#ffffff" rx="1"/>
+                    <rect x="16" y="16" width="8" height="8" fill="#4f46e5"/>
+                    <!-- Top-Right Finder -->
+                    <rect x="68" y="8" width="24" height="24" fill="#0f172a" rx="2"/>
+                    <rect x="72" y="12" width="16" height="16" fill="#ffffff" rx="1"/>
+                    <rect x="76" y="16" width="8" height="8" fill="#4f46e5"/>
+                    <!-- Bottom-Left Finder -->
+                    <rect x="8" y="68" width="24" height="24" fill="#0f172a" rx="2"/>
+                    <rect x="12" y="72" width="16" height="16" fill="#ffffff" rx="1"/>
+                    <rect x="16" y="76" width="8" height="8" fill="#4f46e5"/>
+                    <!-- Data Pattern Modules -->
+                    <rect x="36" y="10" width="4" height="8" fill="#0f172a"/>
+                    <rect x="44" y="14" width="8" height="4" fill="#0f172a"/>
+                    <rect x="56" y="10" width="4" height="12" fill="#0f172a"/>
+                    <rect x="36" y="24" width="8" height="4" fill="#0f172a"/>
+                    <rect x="48" y="22" width="4" height="8" fill="#0f172a"/>
+                    <rect x="56" y="26" width="8" height="4" fill="#0f172a"/>
+                    <rect x="10" y="36" width="12" height="4" fill="#0f172a"/>
+                    <rect x="26" y="36" width="4" height="8" fill="#0f172a"/>
+                    <rect x="34" y="34" width="8" height="8" fill="#4f46e5"/>
+                    <rect x="46" y="36" width="8" height="4" fill="#0f172a"/>
+                    <rect x="58" y="34" width="8" height="8" fill="#0f172a"/>
+                    <rect x="70" y="36" width="10" height="4" fill="#0f172a"/>
+                    <rect x="84" y="36" width="6" height="8" fill="#0f172a"/>
+                    <rect x="10" y="44" width="8" height="4" fill="#0f172a"/>
+                    <rect x="22" y="44" width="8" height="4" fill="#0f172a"/>
+                    <!-- Center Brand Emblem -->
+                    <rect x="42" y="42" width="16" height="16" fill="#0f172a" rx="3"/>
+                    <text x="50" y="53" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="900" fill="#38bdf8" text-anchor="middle">NW</text>
+                    <rect x="62" y="44" width="6" height="8" fill="#0f172a"/>
+                    <rect x="72" y="44" width="8" height="4" fill="#0f172a"/>
+                    <rect x="84" y="48" width="6" height="4" fill="#0f172a"/>
+                    <rect x="10" y="52" width="4" height="12" fill="#0f172a"/>
+                    <rect x="18" y="54" width="8" height="4" fill="#0f172a"/>
+                    <rect x="30" y="52" width="8" height="8" fill="#0f172a"/>
+                    <rect x="62" y="56" width="12" height="4" fill="#0f172a"/>
+                    <rect x="78" y="52" width="4" height="12" fill="#0f172a"/>
+                    <rect x="86" y="56" width="4" height="8" fill="#0f172a"/>
+                    <rect x="36" y="68" width="8" height="4" fill="#0f172a"/>
+                    <rect x="48" y="64" width="4" height="8" fill="#0f172a"/>
+                    <rect x="56" y="68" width="8" height="4" fill="#0f172a"/>
+                    <rect x="68" y="68" width="6" height="8" fill="#0f172a"/>
+                    <rect x="78" y="68" width="8" height="4" fill="#0f172a"/>
+                    <rect x="36" y="78" width="12" height="4" fill="#0f172a"/>
+                    <rect x="52" y="76" width="6" height="8" fill="#0f172a"/>
+                    <rect x="62" y="78" width="10" height="4" fill="#0f172a"/>
+                    <rect x="76" y="78" width="8" height="4" fill="#0f172a"/>
+                    <rect x="88" y="74" width="4" height="8" fill="#0f172a"/>
+                    <rect x="36" y="86" width="4" height="6" fill="#0f172a"/>
+                    <rect x="44" y="88" width="12" height="4" fill="#0f172a"/>
+                    <rect x="60" y="86" width="6" height="6" fill="#0f172a"/>
+                    <rect x="70" y="88" width="14" height="4" fill="#0f172a"/>
+                    <rect x="88" y="86" width="4" height="6" fill="#0f172a"/>
+                  </svg>
+                  <span class="qr-caption">Scan to Verify Event Authenticity</span>
+                </div>
+
+                <!-- Simulated Barcode -->
+                <div class="barcode-wrapper">
+                  <div class="barcode-lines">
+                    <span class="bar b-thin"></span><span class="bar b-thick"></span><span class="bar b-med"></span>
+                    <span class="bar b-thin"></span><span class="bar b-thick"></span><span class="bar b-thin"></span>
+                    <span class="bar b-med"></span><span class="bar b-thin"></span><span class="bar b-thick"></span>
+                    <span class="bar b-thin"></span><span class="bar b-med"></span><span class="bar b-thick"></span>
+                    <span class="bar b-thin"></span><span class="bar b-thick"></span><span class="bar b-med"></span>
+                    <span class="bar b-thin"></span><span class="bar b-med"></span><span class="bar b-thick"></span>
+                  </div>
+                  <span class="barcode-number">NXW-2026-FINAL-YR</span>
+                </div>
+
+                <!-- Pass Action Buttons -->
+                <div class="pass-actions-group">
+                  <button id="download-pass-png-btn" class="btn btn-accent btn-sm btn-block">
+                    <span>&#128142; Download HD Pass (PNG)</span>
+                  </button>
+                  <button id="print-pass-pdf-btn" class="btn btn-outline btn-xs btn-block">
+                    <span>&#128424; Print 1-Page PDF</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="post-reg-cta text-center">
+              <p>&#127881; <strong>Seat Confirmed!</strong> Now activate your referral link below to unlock the ₹1,200 bounty race and AI Interview toolkit!</p>
+              <a href="#referrals" class="btn btn-accent btn-sm">Jump to Viral Referral Hub &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: The Viral Referral Engine & Campus Bounty (K-Factor > 1 Engine) -->
+    <section id="referrals" class="section referral-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-accent">Viral Growth Machine</span>
+          <h2 class="section-title">The Campus <span class="gradient-text">Referral Race</span> & Rewards</h2>
+          <p class="section-subtitle">
+            How we scale to 500+ registrations organically with K-factor &gt; 1: Invite peers, unlock exclusive placement toolkits, and compete for ₹2,000 in campus leader bounties.
+          </p>
+        </div>
+
+        <div class="referral-dashboard">
+          <div class="ref-grid">
+            <!-- Left: Student's Personal Referral Hub -->
+            <div class="ref-card personal-hub">
+              <div class="ref-card-header">
+                <h3>Your Viral Invite Link</h3>
+                <span class="badge badge-primary" id="ref-status-badge">Active Link</span>
+              </div>
+              <p class="ref-sub">Every classmate who registers through your link earns you points toward unlocking the placement toolkit and cash rewards.</p>
+
+              <div class="link-copy-box">
+                <input type="text" id="referral-link-input" class="link-input" readonly value="https://nxtwave.ai/ai60?ref=NXW-GUEST">
+                <button id="copy-ref-link-btn" class="btn btn-primary btn-sm">Copy Link</button>
+              </div>
+
+              <div class="share-actions">
+                <button id="share-whatsapp-btn" class="btn btn-whatsapp btn-block">
+                  <span>&#128172; Share on College WhatsApp Group (Pre-filled Message)</span>
+                </button>
+              </div>
+
+              <!-- Unlock Milestone Progress -->
+              <div class="milestone-box">
+                <div class="milestone-header">
+                  <span><strong>Milestone 1:</strong> Refer 2 Classmates</span>
+                  <span id="ref-count-text">0 / 2 Invites</span>
+                </div>
+                <div class="milestone-progress-bar">
+                  <div class="milestone-progress-fill" id="milestone-fill" style="width: 0%;"></div>
+                </div>
+                <div class="milestone-perk" id="milestone-perk-status">
+                  <span class="lock-icon">&#128274;</span>
+                  <span><strong>Locked:</strong> "Top 50 AI Resume STAR Bullets & Interview Cheat Sheet" (Unlocked at 2 invites)</span>
+                </div>
+
+                <!-- Simulation Helper for Evaluators -->
+                <div class="sim-box">
+                  <span class="sim-label">Interactive Evaluator Simulation:</span>
+                  <button id="simulate-invite-btn" class="btn btn-outline btn-xs">+ Simulate Peer Invite (+1)</button>
+                  <button id="reset-sim-btn" class="btn btn-outline btn-xs">Reset</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Live Campus Ambassador Leaderboard (₹2,000 Bounty) -->
+            <div class="ref-card leaderboard-hub">
+              <div class="ref-card-header">
+                <h3>Campus Leaderboard & Bounty Race</h3>
+                <span class="bounty-pool">₹2,000 Prize Pool</span>
+              </div>
+              <div class="leaderboard-cohort-stats">
+                <span><strong><span id="lb-total-reg">430</span></strong> Total Confirmed Students</span>
+                <span>&bull;</span>
+                <span><strong>186</strong> Active Referrers</span>
+              </div>
+              <p class="ref-sub">Real-time ranking of top final-year campus leaders driving peer registrations across India:</p>
+
+              <div class="leaderboard-list">
+                <div class="leader-item rank-1">
+                  <div class="leader-rank"><span class="medal">&#129351;</span> 1st</div>
+                  <div class="leader-info">
+                    <strong>Pooja Venkat</strong>
+                    <span>Anna University, Chennai &bull; 34 invites</span>
+                  </div>
+                  <div class="leader-reward">₹600 UPI</div>
+                </div>
+
+                <div class="leader-item rank-2">
+                  <div class="leader-rank"><span class="medal">&#129352;</span> 2nd</div>
+                  <div class="leader-info">
+                    <strong>Sai Krishna</strong>
+                    <span>JNTU Hyderabad &bull; 28 invites</span>
+                  </div>
+                  <div class="leader-reward">₹400 UPI</div>
+                </div>
+
+                <div class="leader-item rank-3">
+                  <div class="leader-rank"><span class="medal">&#129353;</span> 3rd</div>
+                  <div class="leader-info">
+                    <strong>Karthik Reddy</strong>
+                    <span>VTU Belagavi &bull; 21 invites</span>
+                  </div>
+                  <div class="leader-reward">₹200 UPI</div>
+                </div>
+
+                <div class="leader-item">
+                  <div class="leader-rank">4th</div>
+                  <div class="leader-info">
+                    <strong>Aditi Deshmukh</strong>
+                    <span>COEP Pune &bull; 17 invites</span>
+                  </div>
+                  <div class="leader-reward">CR Voucher</div>
+                </div>
+
+                <div class="leader-item user-rank-item" id="current-user-rank-row">
+                  <div class="leader-rank" id="user-rank-pos">#187</div>
+                  <div class="leader-info">
+                    <strong id="user-rank-name">You (Unranked)</strong>
+                    <span id="user-rank-college">Invite 1 classmate to join the Top 100!</span>
+                  </div>
+                  <div class="leader-reward" id="user-rank-points">0 Invites</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Testimonials & FAQs -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-primary">Clear Doubts</span>
+          <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p class="section-subtitle">Everything you need to know about the 60-minute AI workshop.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I need prior Machine Learning or Deep Learning experience?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No! This workshop is specifically designed for engineering students with basic Python knowledge. We focus on modern API integration and GenAI application engineering (the exact skills companies hire for in 2026), rather than complex tensor calculus or neural network math from scratch.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Will I actually have a working project by the end of 60 minutes?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You will have a live public web link (hosted on Streamlit Cloud) and a clean GitHub repository that you can immediately attach to your LinkedIn and placement resume before the session concludes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are there any hidden charges or software license fees?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Zero. The workshop is 100% free as part of NxtWave's Tech Career Initiative. All APIs used have generous free tiers that require no credit card.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How will I join the live workshop?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Once you register, your seat is locked. You will receive an instant digital Admit Pass and a WhatsApp message with the private Zoom access link 2 hours before the start.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Mobile Bar -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-info">
+      <span class="mobile-fee">100% Free</span>
+      <span class="mobile-seats"><strong id="mobile-seats-count">82</strong> spots left</span>
+    </div>
+    <a href="#register" class="btn btn-primary btn-sm">Register Now &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-nxt">NXT</span><span class="logo-wave">WAVE</span>
+        </div>
+        <p>Empowering 4.0 Tech Careers for Next-Gen Engineers.</p>
+      </div>
+      <div class="footer-links">
+        <p><strong>NxtWave Growth Intern Challenge Submission</strong> &bull; Round 1 Simulation</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
